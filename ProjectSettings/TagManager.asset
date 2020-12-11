@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - start
+  - monster
+  - finish
   layers:
   - Default
   - TransparentFX
@@ -40,4 +43,22 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: floor
+    uniqueID: 1293539537
+    locked: 0
+  - name: wallDown
+    uniqueID: 285913747
+    locked: 0
+  - name: monster
+    uniqueID: 1817478629
+    locked: 0
+  - name: bullet
+    uniqueID: 2017160067
+    locked: 0
+  - name: player
+    uniqueID: 3835563737
+    locked: 0
+  - name: wallUp
+    uniqueID: 1360975423
     locked: 0
