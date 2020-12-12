@@ -23,14 +23,7 @@ public class aim : MonoBehaviour {
         }
         else
         {
-            if (search.radius < 0.5f)
-            {
-                search.radius += 0.1f;
-            }
-            else
-            {
-                search.radius += 0.9f;
-            }
+            search.radius += 0.9f;
         }
         if (!obj)
         {
