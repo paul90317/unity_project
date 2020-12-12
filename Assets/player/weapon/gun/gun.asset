@@ -15,5 +15,5 @@ MonoBehaviour:
   size: {x: 0.9, y: 0.5}
   handDistance: 0.7
   firePoint: 1.1
-  coolDown: 35
+  coolDown: 1
   bullet: {fileID: 1848585458784050, guid: 0c6779f9cd602554f8063b32e975ab1d, type: 2}
