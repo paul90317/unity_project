@@ -36,7 +36,9 @@ public class aim : MonoBehaviour {
         {
             transform.right = Input.mousePosition - new Vector3((float)Screen.width / 2, (float)Screen.height / 2, 0);
         }
-	}
+        transform.GetChild(0).GetComponent<SpriteRenderer>().flipX = false;
+        transform.GetChild(0).GetComponent<SpriteRenderer>().flipY = (transform.right.x < 0);
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

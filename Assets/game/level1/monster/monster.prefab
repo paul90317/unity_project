@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212396241903929354}
   - component: {fileID: 50063088938161968}
   - component: {fileID: 61852341790225854}
-  - component: {fileID: 114464737812780792}
+  - component: {fileID: 114168497768022986}
   m_Layer: 0
   m_Name: monster
   m_TagString: monster
@@ -62,7 +62,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &61852341790225854
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -88,7 +88,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &114464737812780792
+--- !u!114 &114168497768022986
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -96,9 +96,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1179996690641022}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 064de0cc5c9aca344a0ad18c1ab8b76c, type: 3}
+  m_Script: {fileID: 11500000, guid: 4d4e8980a7031774a84a11145079f34d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 5
 --- !u!212 &212396241903929354
 SpriteRenderer:
   m_ObjectHideFlags: 1

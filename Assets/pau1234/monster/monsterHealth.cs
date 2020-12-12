@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class died : MonoBehaviour {
+public class monsterHealth : MonoBehaviour {
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public int health;
+	
+    public void hurt(int damage)
     {
-        if (collision.transform.tag == "Player")
+        health -= damage;
+        if (health <= 0)
         {
             transform.parent.gameObject.SendMessage("removeMonster");
             Destroy(gameObject);
