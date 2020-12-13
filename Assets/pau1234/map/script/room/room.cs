@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class room : MonoBehaviour {
     public int MAX_GRID;
-    public TextAsset[] rooms;
+    public RoomData[] rooms;
     public GameObject[] block;
     public GameObject[] monster;
     public GameObject[] treasure;
@@ -34,7 +34,7 @@ public class room : MonoBehaviour {
         space = new Vector2Int[0];
 
         int id = r.Next(rooms.Length);
-        int[] input2 = myMethod.get_arr(rooms[id].ToString());
+        int[] input2 = myMethod.get_arr(rooms[id].roomMap.ToString());
         len = input2[0];
         wid = input2[1];
         transform.localPosition = new Vector3(MAX_GRID / 2 - len / 2, MAX_GRID / 2 - wid / 2);
@@ -57,19 +57,7 @@ public class room : MonoBehaviour {
         GameObject backfloor = gmake(len / 2, wid / 2, block[0]);
         backfloor.GetComponent<SpriteRenderer>().size = new Vector2(len - 2, wid - 2);
 
-        if (k < input2.Length)
-        {
-            int sz = input2[k++];
-            monsterWave = new int[sz];
-            for(int i = 0; i < sz; i++)
-            {
-                monsterWave[i] = input2[k++];
-            }
-        }
-        else
-        {
-            monsterWave = new int[0];
-        }
+        monsterWave = rooms[id].monsterWave;
 
         lv = cnt = 0;
 	}

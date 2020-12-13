@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+
 public class homeRoom : MonoBehaviour
 {
     public int MAX_GRID;

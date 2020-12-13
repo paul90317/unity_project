@@ -57,5 +57,5 @@ MonoBehaviour:
   boss: {fileID: 0}
   treasure: {fileID: 0}
   transformGate: {fileID: 0}
-  sensor: {fileID: 0}
+  sensor: {fileID: 1769331950004656, guid: ed94db37764cea6489c5f003962f07ef, type: 2}
   gate: {fileID: 0}
