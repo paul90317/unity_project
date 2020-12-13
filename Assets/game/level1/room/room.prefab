@@ -53,8 +53,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MAX_GRID: 49
   rooms:
-  - {fileID: 4900000, guid: 9d54f8155138cbe47ad0d077e6579e54, type: 3}
-  - {fileID: 4900000, guid: 921154e78b4366847be11657ee2e914b, type: 3}
+  - {fileID: 11400000, guid: 4660382bba14f664e8f838912c968e69, type: 2}
+  - {fileID: 11400000, guid: 65a66ffbc2857604b9fa37aaf7abb634, type: 2}
+  - {fileID: 11400000, guid: 559f12b2e1749a04ab788121736c8fe4, type: 2}
   block:
   - {fileID: 1626585109949394, guid: 9b13aa08f7cb5d84e9c4e8fea043fff0, type: 2}
   - {fileID: 1078898344108722, guid: 12c36c46a05662441ae6fe48193dece4, type: 2}
