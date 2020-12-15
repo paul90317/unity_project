@@ -7,6 +7,9 @@ TagManager:
   - start
   - monster
   - finish
+  - transition
+  - MapManager
+  - box
   layers:
   - Default
   - TransparentFX
@@ -55,6 +58,9 @@ TagManager:
     locked: 0
   - name: bullet
     uniqueID: 2017160067
+    locked: 0
+  - name: item
+    uniqueID: 1599959869
     locked: 0
   - name: player
     uniqueID: 3835563737

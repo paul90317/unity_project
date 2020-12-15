@@ -9,9 +9,13 @@ public class monsterHealth : MonoBehaviour {
     public void hurt(int damage)
     {
         health -= damage;
+        Debug.Log("hurt");
         if (health <= 0)
         {
-            transform.parent.gameObject.SendMessage("removeMonster");
+            if (tag == "monster")
+            {
+                transform.parent.gameObject.SendMessage("removeMonster");
+            }
             Destroy(gameObject);
         }
     }
