@@ -11,7 +11,7 @@ public class bullet : MonoBehaviour {
 	}
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.tag == "monster")
+        if (collision.transform.tag == "monster" || collision.transform.tag == "box") 
         {
             collision.gameObject.SendMessage("hurt", damage);
         }

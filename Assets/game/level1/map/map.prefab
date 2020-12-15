@@ -61,5 +61,5 @@ MonoBehaviour:
   home_room3: {fileID: 1650193365570796, guid: 405d5fd1988bb634a857f2378c7b2669, type: 2}
   boss_room4:
   - {fileID: 1636634006140700, guid: 6c37aac50d5f15142b9afbb8088326ad, type: 2}
-  gate_room5: {fileID: 0}
+  gate_room5: {fileID: 1344980166617514, guid: d78b4aac54bedf9489883b757b36d546, type: 2}
   special_room6: []
