@@ -13,9 +13,11 @@ G 傳送門
 ```cmd
 git checkout -b [yourbranch]
 git fetch origin main
+git merge origin/main
 ```
 
 第二行是更新本地進度(引入 main 進度)
+第三行是要接在第二行後面，才會更新。
 
 * loop
 
