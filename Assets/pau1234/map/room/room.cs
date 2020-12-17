@@ -64,15 +64,6 @@ public class room : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (tag=="start"&&lv > monsterWave.Length)
-        {
-            tag = "finish";
-            if (treasure.Length > 0)
-            {
-                gmake(len / 2, wid / 2, treasure[r.Next(treasure.Length)]);
-            }
-            return;
-        }
         if ( lv > monsterWave.Length)
         {
             return;
@@ -83,6 +74,11 @@ public class room : MonoBehaviour {
             lv++;
             if (lv > monsterWave.Length)
             {
+                tag = "finish";
+                if (treasure.Length > 0)
+                {
+                    gmake(len / 2, wid / 2, treasure[r.Next(treasure.Length)]);
+                }
                 return;
             }
             for(int i = 0; i < monsterWave[lv-1]; i++)

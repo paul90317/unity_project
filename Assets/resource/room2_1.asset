@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Name: room2_1
   m_EditorClassIdentifier: 
   roomMap: {fileID: 4900000, guid: 921154e78b4366847be11657ee2e914b, type: 3}
-  monsterWave: 06000000080000000700000009000000
+  monsterWave: 01000000
