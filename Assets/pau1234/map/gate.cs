@@ -26,11 +26,14 @@ public class gate : MonoBehaviour {
         }
         if (f2 && transform.parent && transform.parent.tag == "finish") 
         {
-            an.SetTrigger("open");
+            if (an)
+            {
+                an.SetTrigger("open");
+            }
             f3 = true;
             f2 = false;
         }
-        if (f3 && cl.transform.GetChild(0).localPosition.y < 0.0001f)
+        if (f3 && cl && cl.transform.GetChild(0).localPosition.y < 0.0001f)
         {
             Destroy(cl);
             f3 = false;
