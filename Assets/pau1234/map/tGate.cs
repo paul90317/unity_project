@@ -4,16 +4,12 @@ using UnityEngine;
 
 
 public class tGate : MonoBehaviour {
-    GameObject[] transitions;
+    GameObject transition;
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player" && Input.GetKey(KeyCode.G))
         {
-            transitions = GameObject.FindGameObjectsWithTag("transition");
-            for (int i = 0; i < transitions.Length; i++)
-            {
-                transitions[i].GetComponent<Animator>().SetTrigger("start");
-            }
+            GameObject.FindWithTag("transition").GetComponent<Animator>().SetInteger("next", 1);
             GameObject.FindWithTag("MapManager").SendMessage("NextScene");
         }
     }

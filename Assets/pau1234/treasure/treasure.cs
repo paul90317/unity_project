@@ -15,9 +15,9 @@ public class treasure : MonoBehaviour {
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        GetComponent<Animator>().SetTrigger("open");
-        if (collision.gameObject.tag == "Player" && !opened) 
+        if (!opened && collision.gameObject.tag == "Player") 
         {
+            GetComponent<Animator>().SetTrigger("open");
             opened = true;
             GameObject g = Instantiate<GameObject>(item[r.Next(item.Length)]);
             g.transform.position = transform.position + new Vector3(0, 0.25f, 0);

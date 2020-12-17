@@ -64,25 +64,25 @@ public class room : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (tag=="start"&&lv > monsterWave.Length)
-        {
-            tag = "finish";
-            if (treasure.Length > 0)
-            {
-                gmake(len / 2, wid / 2, treasure[r.Next(treasure.Length)]);
-            }
-            return;
-        }
         if ( lv > monsterWave.Length)
         {
             return;
         }
-
+        if (tag == "start")
+        {
+            Debug.Log("max=" + monsterWave.Length.ToString() + " lv=" + lv.ToString() + " cnt=" + cnt.ToString());
+        }
+        
         if (cnt == 0)
         {
             lv++;
             if (lv > monsterWave.Length)
             {
+                tag = "finish";
+                if (treasure.Length > 0)
+                {
+                    gmake(len / 2, wid / 2, treasure[r.Next(treasure.Length)]);
+                }
                 return;
             }
             for(int i = 0; i < monsterWave[lv-1]; i++)

@@ -20,7 +20,7 @@ public class sensor : MonoBehaviour {
     
     // Update is called once per frame
     void Update () {
-        if (room.tag == "start"||room.tag=="finish")
+        if (room.tag == "start" || room.tag == "finish")
         {
             Destroy(transform.gameObject);
         }

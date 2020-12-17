@@ -9,7 +9,6 @@ public class monsterHealth : MonoBehaviour {
     public void hurt(int damage)
     {
         health -= damage;
-        Debug.Log("hurt");
         if (health <= 0)
         {
             if (tag == "monster")
