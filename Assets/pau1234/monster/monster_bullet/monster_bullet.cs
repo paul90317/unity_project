@@ -23,6 +23,7 @@ public class monster_bullet : MonoBehaviour {
             collision.gameObject.SendMessage("hurt", damage);
             Destroy(gameObject);
         }
-        //Destroy(gameObject);
+        if(collision.transform.tag != "monster")
+            Destroy(gameObject);
     }
 }

@@ -22,7 +22,7 @@ public class monster_move : MonoBehaviour {
     private void FixedUpdate()
     {
         time += Time.fixedDeltaTime;
-        if (transform.parent.tag == "start" && time >= 2.0f)
+        if (transform.parent.tag == "start" && time >= 4.0f)
         {
             tmp = r.Next(0, 361);
             time = 0;
@@ -33,6 +33,10 @@ public class monster_move : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        if(collision.transform.tag != "Player" && collision.transform.tag != "bullet")
+        {
+            xmovement *= -1;
+            ymovement *= -1;
+        }
     }
 }
