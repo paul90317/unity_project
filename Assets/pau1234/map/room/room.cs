@@ -68,11 +68,7 @@ public class room : MonoBehaviour {
         {
             return;
         }
-        if (tag == "start")
-        {
-            Debug.Log("max=" + monsterWave.Length.ToString() + " lv=" + lv.ToString() + " cnt=" + cnt.ToString());
-        }
-        
+
         if (cnt == 0)
         {
             lv++;

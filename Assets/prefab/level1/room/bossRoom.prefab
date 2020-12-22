@@ -56,8 +56,8 @@ MonoBehaviour:
   block:
   - {fileID: 1626585109949394, guid: 9b13aa08f7cb5d84e9c4e8fea043fff0, type: 2}
   - {fileID: 1078898344108722, guid: 12c36c46a05662441ae6fe48193dece4, type: 2}
-  boss: {fileID: 1179996690641022, guid: 7c2c1e6173c94664ca73af899a4414d5, type: 2}
-  treasure: {fileID: 1434122248291764, guid: 87dab167947b96c48bc80b9328568922, type: 2}
+  boss: {fileID: 1293319284536590, guid: 16feb7846da7e784fb7d28f082630510, type: 2}
+  treasure: {fileID: 1867845652553134, guid: 6480f57e78d117d4695fd962741cf95c, type: 2}
   transformGate: {fileID: 1609739848125284, guid: efb2811e41095ed48a9617c9465474f2,
     type: 2}
   sensor: {fileID: 1769331950004656, guid: 27d857717c30b57478c49e1e82c6a79e, type: 2}

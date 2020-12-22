@@ -5,13 +5,31 @@ using UnityEngine;
 public class monsterHealth : MonoBehaviour {
 
     public int health;
-	
+    Rigidbody2D rb;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        rb.bodyType = RigidbodyType2D.Kinematic;
+    }
+
     public void hurt(int damage)
     {
-        health -= damage;
+        if (!transform.parent || transform.parent.tag == "start")
+        {
+            health -= damage;
+        }
+    }
+
+    private void Update()
+    {
+        if (transform.parent && transform.parent.tag == "start")
+        {
+            rb.bodyType = RigidbodyType2D.Dynamic;
+        }
         if (health <= 0)
         {
-            if (tag == "monster")
+            if (transform.parent)
             {
                 transform.parent.gameObject.SendMessage("removeMonster");
             }
