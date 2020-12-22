@@ -24,6 +24,8 @@ GameObject:
   - component: {fileID: 114548135640116444}
   - component: {fileID: 61794066206907908}
   - component: {fileID: 50623376054125476}
+  - component: {fileID: 114742117605562686}
+  - component: {fileID: 114688173211101138}
   m_Layer: 0
   m_Name: bat
   m_TagString: monster
@@ -118,6 +120,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
+--- !u!114 &114688173211101138
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1293319284536590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21ac09e924d94ed458f613fe55db267e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monster_bullet: {fileID: 1745230843922550, guid: f7b89e0f3bcc8e844be522014fa19042,
+    type: 2}
+--- !u!114 &114742117605562686
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1293319284536590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4941bc5b96dcde044822c7030560843c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0.1
+  monster_bullet: {fileID: 0}
 --- !u!212 &212988401254151574
 SpriteRenderer:
   m_ObjectHideFlags: 1
