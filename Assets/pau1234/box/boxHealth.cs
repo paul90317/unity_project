@@ -17,6 +17,7 @@ public class boxHealth : MonoBehaviour {
     {
         if (health <= 0)
         {
+            GetComponent<BoxCollider2D>().enabled = false;
             shoot();
             Destroy(gameObject);
         }
@@ -27,7 +28,6 @@ public class boxHealth : MonoBehaviour {
         float d = 360f / n;
         for(int i = 0; i < n; i++)
         {
-            GetComponent<BoxCollider2D>().enabled = false;
             GameObject t = Instantiate<GameObject>(item);
             t.transform.Rotate(0, 0, i * d);
             t.transform.position = transform.position;

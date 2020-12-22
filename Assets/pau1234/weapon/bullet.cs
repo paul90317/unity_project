@@ -21,7 +21,7 @@ public class bullet : MonoBehaviour {
         {
             collision.gameObject.SendMessage("hurt", damage);
         }
-        if (!collision.GetComponent<Collider2D>().isTrigger)
+        if (!collision.GetComponent<Collider2D>().isTrigger && collision.tag != "Player")
         {
             Destroy(gameObject);
         }
