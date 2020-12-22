@@ -10,6 +10,9 @@ TagManager:
   - transition
   - MapManager
   - box
+  - bullet
+  - Weapon
+  - Wall
   layers:
   - Default
   - TransparentFX

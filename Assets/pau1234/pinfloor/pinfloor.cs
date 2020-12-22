@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class pinfloor : MonoBehaviour {
 
+    public int damage;
     public int coolDown;
     int cnt;
 	
     void Awake()
     {
         cnt = 0;
-        Debug.Log("awake");
     }
 
     private void OnEnable()
@@ -30,7 +30,7 @@ public class pinfloor : MonoBehaviour {
         if (cnt >= coolDown && collision.tag == "Player")
         {
             cnt = 0;
-            Debug.Log("hurt");
+            collision.gameObject.SendMessage("hurt", damage);
         }
     }
 }
