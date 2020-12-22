@@ -24,6 +24,8 @@ GameObject:
   - component: {fileID: 114812338443141802}
   - component: {fileID: 50459294877015158}
   - component: {fileID: 61555233350191848}
+  - component: {fileID: 114802180504267510}
+  - component: {fileID: 114194006972740786}
   m_Layer: 0
   m_Name: monster1
   m_TagString: monster
@@ -106,6 +108,32 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114194006972740786
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1380904114432070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21ac09e924d94ed458f613fe55db267e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monster_bullet: {fileID: 1745230843922550, guid: f7b89e0f3bcc8e844be522014fa19042,
+    type: 2}
+--- !u!114 &114802180504267510
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1380904114432070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4941bc5b96dcde044822c7030560843c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0.1
+  monster_bullet: {fileID: 0}
 --- !u!114 &114812338443141802
 MonoBehaviour:
   m_ObjectHideFlags: 1
