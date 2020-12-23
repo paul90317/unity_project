@@ -118,6 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
+  rb: {fileID: 0}
 --- !u!212 &212988401254151574
 SpriteRenderer:
   m_ObjectHideFlags: 1
