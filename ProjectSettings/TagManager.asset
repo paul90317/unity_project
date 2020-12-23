@@ -11,7 +11,6 @@ TagManager:
   - MapManager
   - box
   - bullet
-  - Weapon
   - Wall
   layers:
   - Default
@@ -23,8 +22,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Enemy
+  - Wall
   - 
   - 
   - 
@@ -70,4 +69,7 @@ TagManager:
     locked: 0
   - name: wallUp
     uniqueID: 1360975423
+    locked: 0
+  - name: effects
+    uniqueID: 3907576229
     locked: 0
