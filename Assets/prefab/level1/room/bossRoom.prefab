@@ -56,7 +56,7 @@ MonoBehaviour:
   block:
   - {fileID: 1626585109949394, guid: 9b13aa08f7cb5d84e9c4e8fea043fff0, type: 2}
   - {fileID: 1078898344108722, guid: 12c36c46a05662441ae6fe48193dece4, type: 2}
-  boss: {fileID: 1293319284536590, guid: 16feb7846da7e784fb7d28f082630510, type: 2}
+  boss: {fileID: 1538975947646360, guid: eb96cced217a9f042ac0fb61c3810606, type: 2}
   treasure: {fileID: 1867845652553134, guid: 6480f57e78d117d4695fd962741cf95c, type: 2}
   transformGate: {fileID: 1609739848125284, guid: efb2811e41095ed48a9617c9465474f2,
     type: 2}
