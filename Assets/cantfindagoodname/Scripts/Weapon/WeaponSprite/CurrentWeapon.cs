@@ -17,6 +17,7 @@ public class CurrentWeapon : MonoBehaviour {
 
             previousWeapon = currentWeapon;
             GetComponent<SpriteRenderer>().sprite = currentWeapon.currentWeaponSprite;
+            GetComponent<SpriteRenderer>().size = new Vector2(currentWeapon.width, currentWeapon.height);
         }
 	}
 }

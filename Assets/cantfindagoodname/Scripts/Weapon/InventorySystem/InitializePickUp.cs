@@ -19,6 +19,7 @@ public class InitializePickUp : MonoBehaviour {
 
         sr = GetComponent<SpriteRenderer>();
         sr.sprite = thisWeapon.currentWeaponSprite;
+        sr.size = new Vector2(thisWeapon.width, thisWeapon.height);
 
         boxCollider = GetComponent<BoxCollider2D>();
         boxCollider.size = sr.bounds.size;
@@ -34,6 +35,7 @@ public class InitializePickUp : MonoBehaviour {
             {
                 thisWeapon = temp;
                 sr.sprite = thisWeapon.currentWeaponSprite;
+                sr.size = new Vector2(thisWeapon.width, thisWeapon.height);
             }
             playerEnter = false;
         }

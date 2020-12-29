@@ -6,17 +6,19 @@ using UnityEngine;
 public class Bullet1 : MonoBehaviour {
 
     private Rigidbody2D rb;
-    private float bulletForce = 30f;
+    private float bulletForce = 5f;
     private Vector2 shootingDirection;
 
-    [SerializeField]
-    public int damage;
+    private int damage;
 
 	void Start () {
-        damage = 1;
 
         rb = GetComponent<Rigidbody2D>();
-        shootingDirection = (GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).transform.right).normalized;
+        shootingDirection = ((Vector2)GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).transform.right).normalized;
+
+        damage = GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).GetComponent<CurrentWeapon>().currentWeapon.damage;
+
+        Destroy(gameObject, 10f);
 	}
 	
 	void Update () {

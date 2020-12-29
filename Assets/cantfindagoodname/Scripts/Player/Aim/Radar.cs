@@ -8,22 +8,26 @@ public class Radar : MonoBehaviour {
     public bool enemyInRange;
     public Vector3 enemyPos;
     private CircleCollider2D radar;
+
+    public float detectRange;
     private void Awake()
     {
         radar = GetComponent<CircleCollider2D>();
         Physics2D.IgnoreCollision(radar, GameObject.FindGameObjectWithTag("Player").GetComponent<Collider2D>());
+
+        radar.radius = 0;
     }
     private void Update()
     {
-        if (radar.radius >= 30f)
+        if (radar.radius >= detectRange)
         {
             radar.radius = 0f;
             enemyInRange = false;
         }
-        else if (radar.radius > 20f)
-            radar.radius += 1f;
+        else if (radar.radius > 2 * detectRange / 3) 
+            radar.radius += 1.5f;
         else
-            radar.radius += 0.5f;
+            radar.radius += 1f;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

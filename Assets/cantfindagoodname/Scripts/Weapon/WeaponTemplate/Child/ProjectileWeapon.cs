@@ -9,20 +9,20 @@ public class ProjectileWeapon : Weapon {
     public float fireRate;
 
     private Vector2 firePoint;
-    private float delayTime;
+    private float cooldownEnd;
 
     public override void Shoot()
     {
-        if (delayTime >= 10)
+        if (Time.time > cooldownEnd) 
         {
             firePoint = (Vector2)GameObject.FindGameObjectWithTag("Player").transform.position + (Vector2)GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).transform.right * handDistance;
             Instantiate(bulletPrefab, firePoint, Quaternion.identity);
 
-            delayTime = 0;
+            cooldownEnd = Time.time + 1 / fireRate;
         }
-        else
-        {
-            delayTime += Time.deltaTime * fireRate;
-        }
+    }
+    private void OnEnable()
+    {
+        cooldownEnd = 0f;
     }
 }

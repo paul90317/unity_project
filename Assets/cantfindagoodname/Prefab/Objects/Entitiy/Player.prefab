@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4521011180084356}
   - component: {fileID: 58694546002800694}
   - component: {fileID: 114888133118291212}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Radar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76,6 +76,8 @@ GameObject:
   - component: {fileID: 114172461733353672}
   - component: {fileID: 114717226711324906}
   - component: {fileID: 61420728332403128}
+  - component: {fileID: 114357385170239696}
+  - component: {fileID: 114140929462114806}
   m_Layer: 11
   m_Name: Player
   m_TagString: Player
@@ -131,9 +133,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1352899563047750}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.25, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4824048069915798}
   m_RootOrder: 0
@@ -144,8 +146,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1576379839463908}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 73, y: 24, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -28.18, y: 2.83, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4701672778899952}
@@ -162,7 +164,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1364388436650950}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 8, z: 0}
+  m_LocalPosition: {x: 0.013, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4824048069915798}
@@ -202,7 +204,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 25.0001
 --- !u!61 &61420728332403128
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -215,7 +217,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0050401688, y: 0.08089113}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -226,7 +228,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10, y: 10}
+  m_Size: {x: 1.0215187, y: 1.1675324}
   m_EdgeRadius: 0
 --- !u!114 &114105639785737228
 MonoBehaviour:
@@ -240,6 +242,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentWeapon: {fileID: 11400000, guid: 0488f31e8ac5eab4989298b4a2b7e08f, type: 2}
+--- !u!114 &114140929462114806
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1576379839463908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 451a91f21d53e0f48851ca03d48317df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 10
+  maxShield: 5
+  healthBar: {fileID: 114802770325839996, guid: 4400e45b72dc10a47a4d5ac30b227aac,
+    type: 2}
 --- !u!114 &114172461733353672
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -263,7 +280,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34468ca8ceb3079429629ac3de1a28a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: []
+  inventory:
+  - {fileID: 11400000, guid: 0488f31e8ac5eab4989298b4a2b7e08f, type: 2}
 --- !u!114 &114331797957899282
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -273,6 +291,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 244633acf820df346919817619299040, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114357385170239696
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1576379839463908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4ff18be7b5b46f47a526854ca7dc8be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114444609963908722
@@ -309,7 +338,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyInRange: 0
-  enemyPos: {x: 0, y: 0, z: 0}
+  enemyPos: {x: 37, y: 115, z: 0}
+  detectRange: 20
 --- !u!212 &212754119608367764
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -341,15 +371,15 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -107474693
-  m_SortingLayer: 0
+  m_SortingLayerID: -459403559
+  m_SortingLayer: 6
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: e2e957e322c7ca542a33b03ac6be6f56, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c4e9f2b334a0a68429a9ea249700e5d4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 10, y: 10}
+  m_DrawMode: 1
+  m_Size: {x: 0.9, y: 0.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -385,18 +415,18 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -459403559
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 89ab8665204a07842b5b10c03d19d678, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 11.8, y: 7.8}
+  m_DrawMode: 1
+  m_Size: {x: 1.3, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
 --- !u!212 &212835178560634590
 SpriteRenderer:
@@ -429,16 +459,16 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -459403559
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 68a23974985488e4cb6cd19d323b406e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 8.35, y: 8.1}
+  m_DrawMode: 1
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
