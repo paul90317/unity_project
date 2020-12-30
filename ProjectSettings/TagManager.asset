@@ -53,6 +53,9 @@ TagManager:
   - name: floor
     uniqueID: 1293539537
     locked: 0
+  - name: pinfloor
+    uniqueID: 4173502401
+    locked: 0
   - name: wallDown
     uniqueID: 285913747
     locked: 0

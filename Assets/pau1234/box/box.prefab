@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
-  n: 8
+  n: 0
   item: {fileID: 1759038938620046, guid: 2fe390af9ad38804b947c3163ddf7aa2, type: 2}
 --- !u!212 &212003519761935934
 SpriteRenderer:
@@ -164,7 +164,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1360975423
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 8250fca95ca825e48b75b83acd4f012d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -208,7 +208,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 285913747
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 72e0b113fb75a6e4d869c1d3eb062715, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

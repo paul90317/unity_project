@@ -51,8 +51,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fffd227b3da17294ba67506c446c6146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MAX_GRID: 49
-  maps: []
+  MAX_GRID: 35
+  maps:
+  - {fileID: 4900000, guid: 3fd8c5e9ae61c064384529e6c6430760, type: 3}
+  - {fileID: 4900000, guid: a8b8b9a85bee60d4d992a07665c5abc4, type: 3}
+  - {fileID: 4900000, guid: daf2fe3addf7eb0449a29d80ed27d799, type: 3}
   normal_room1: {fileID: 0}
   walker2: {fileID: 0}
   home_room3: {fileID: 0}
