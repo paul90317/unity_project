@@ -32,7 +32,18 @@ public class map : MonoBehaviour {
                 imap[j, wid-i-1] = int.Parse(input2[k]);
             }
         }
-        dfs(0, wid-1);
+        for(int i = 0; i < len; i++)
+        {
+            for(int j = 0; j < wid; j++)
+            {
+                if (imap[i, j] == 3) 
+                {
+                    dfs(i, j);
+                    break;
+                }
+            }
+        }
+        
 	}
     int len, wid;
     void dfs(int i,int j)

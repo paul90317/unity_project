@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8059b1e299daab547b0202f0be14a38f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MAX_GRID: 49
+  MAX_GRID: 35
   room: {fileID: 0}
   block: []
   npcRightTopSide: 0

@@ -51,8 +51,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f06daa072c6244e468da6d21085a7ce9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MAX_GRID: 49
-  rooms: []
+  MAX_GRID: 35
+  rooms:
+  - {fileID: 11400000, guid: 4660382bba14f664e8f838912c968e69, type: 2}
+  - {fileID: 11400000, guid: 65a66ffbc2857604b9fa37aaf7abb634, type: 2}
+  - {fileID: 11400000, guid: e79946d9a85ce6941bb1d3c0a423a5ca, type: 2}
+  - {fileID: 11400000, guid: ffe54b597438bc04b81093cbbf5f69db, type: 2}
   block: []
   monster: []
   treasure: []
