@@ -22,9 +22,9 @@ GameObject:
   - component: {fileID: 212662480594842662}
   - component: {fileID: 61554272973033810}
   - component: {fileID: 50253302645097794}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: wall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38,7 +38,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4950269233634220}
   - component: {fileID: 212873415198760006}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: wall2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

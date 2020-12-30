@@ -73,7 +73,7 @@ public class map : MonoBehaviour {
                 GameObject player = GameObject.FindWithTag("Player");
                 if (player)
                 {
-                    player.transform.position = transform.position + new Vector3(i / 2 * MAX_GRID + MAX_GRID / 2, j / 2 * MAX_GRID + MAX_GRID / 2, -1);
+                    player.transform.position = transform.position + new Vector3(i / 2 * MAX_GRID + MAX_GRID / 2, j / 2 * MAX_GRID + MAX_GRID / 2, 0);
                 }
                 break;
             case 4:

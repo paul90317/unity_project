@@ -20,7 +20,11 @@ public class monster_bullet : MonoBehaviour {
     {
         if (collision.transform.tag == "Player" || collision.transform.tag == "box")
         {
+<<<<<<< HEAD
             collision.gameObject.SendMessage("hurt", damage);
+=======
+            //collision.gameObject.SendMessage("hurt", damage);
+>>>>>>> cantfindagoodname
             Destroy(gameObject);
         }
         if(collision.transform.tag != "monster")
