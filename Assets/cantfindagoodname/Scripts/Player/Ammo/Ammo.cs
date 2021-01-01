@@ -7,11 +7,25 @@ public class Ammo : MonoBehaviour {
 
     public int maxAmmo;
     private int _AMMO;
+
+    private float inCombatTime, combatTagTime;
     private void Awake()
     {
         maxAmmo = 180;
         ammo = maxAmmo;
         ammoBar.setMaxAmmo(maxAmmo);
+
+        combatTagTime = 5f;
+    }
+    private void Update()
+    {
+        if (ammo < maxAmmo)
+        {
+            if (GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHP>().inCombat == false && inCombatTime < Time.time) 
+            {
+                ammo += 1;
+            }
+        }
     }
     public int ammo
     {
@@ -32,5 +46,9 @@ public class Ammo : MonoBehaviour {
             }
             ammoBar.setAmmo(ammo);
         }
+    }
+    public void resetCombatTimer()
+    {
+        inCombatTime = Time.time + combatTagTime;
     }
 }

@@ -8,6 +8,7 @@ public class Fire : MonoBehaviour {
         if (Input.GetButton("Fire1"))
         {
             GetComponent<CurrentWeapon>().currentWeapon.Shoot();
+            GetComponentInParent<Ammo>().resetCombatTimer();
         }
         else if (Input.GetButtonUp("Fire1"))
         {

@@ -10,8 +10,8 @@ public class PlayerHP : MonoBehaviour {
     private int shield;
     private bool selfDamage;
 
+    public bool inCombat;
     private int shieldChargeSpeed;
-    private bool inCombat;
     private float inCombatTime, combatTagTime;
 
     private HealthBar healthBar;
