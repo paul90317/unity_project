@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fffd227b3da17294ba67506c446c6146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MAX_GRID: 49
+  MAX_GRID: 35
   maps:
   - {fileID: 4900000, guid: 1accb39945a4e694c8d7c531e6dd9874, type: 3}
   normal_room1: {fileID: 1576701608518744, guid: 74b35a020ed338544aaef9aa4e1e7838,

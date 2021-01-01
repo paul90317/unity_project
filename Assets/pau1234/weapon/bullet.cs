@@ -6,15 +6,24 @@ public class bullet : MonoBehaviour {
 
     public float speed;
     public int damage;
-	void Update () {
-        GetComponent<Rigidbody2D>().velocity = transform.right * speed;
-	}
-    private void OnCollisionEnter2D(Collision2D collision)
+    Vector3 dir;
+
+    private void Start()
     {
-        if (collision.transform.tag == "monster" || collision.transform.tag == "box") 
+        dir = GetComponent<Rigidbody2D>().velocity = transform.right;
+    }
+    void Update () {
+        GetComponent<Rigidbody2D>().velocity = dir * speed;
+	}
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.transform.tag == "monster" || collision.transform.tag == "box")
         {
             collision.gameObject.SendMessage("hurt", damage);
         }
-        Destroy(gameObject);
+        if (!collision.GetComponent<Collider2D>().isTrigger && collision.tag != "Player")
+        {
+            Destroy(gameObject);
+        }
     }
 }

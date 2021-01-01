@@ -9,7 +9,6 @@ public class tGate : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Player" && Input.GetKey(KeyCode.G))
         {
-            GameObject.FindWithTag("transition").GetComponent<Animator>().SetInteger("next", 1);
             GameObject.FindWithTag("MapManager").SendMessage("NextScene");
         }
     }

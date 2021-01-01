@@ -10,6 +10,9 @@ TagManager:
   - transition
   - MapManager
   - box
+  - bullet
+  - Weapon
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -49,6 +52,9 @@ TagManager:
     locked: 0
   - name: floor
     uniqueID: 1293539537
+    locked: 0
+  - name: pinfloor
+    uniqueID: 4173502401
     locked: 0
   - name: wallDown
     uniqueID: 285913747

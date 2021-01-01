@@ -51,11 +51,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8059b1e299daab547b0202f0be14a38f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MAX_GRID: 49
+  MAX_GRID: 35
   room: {fileID: 4900000, guid: 199c30005282d7743970dcb1a5823ef7, type: 3}
   block:
   - {fileID: 1626585109949394, guid: 9b13aa08f7cb5d84e9c4e8fea043fff0, type: 2}
   - {fileID: 1078898344108722, guid: 12c36c46a05662441ae6fe48193dece4, type: 2}
   npcRightTopSide: 1
-  npc:
-  - {fileID: 1429723404001212, guid: ecb8109103326374c8762482f400894a, type: 2}
+  npc: []

@@ -51,17 +51,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f06daa072c6244e468da6d21085a7ce9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MAX_GRID: 49
+  MAX_GRID: 35
   rooms:
   - {fileID: 11400000, guid: 4660382bba14f664e8f838912c968e69, type: 2}
   - {fileID: 11400000, guid: 65a66ffbc2857604b9fa37aaf7abb634, type: 2}
-  - {fileID: 11400000, guid: 559f12b2e1749a04ab788121736c8fe4, type: 2}
+  - {fileID: 11400000, guid: e79946d9a85ce6941bb1d3c0a423a5ca, type: 2}
+  - {fileID: 11400000, guid: ffe54b597438bc04b81093cbbf5f69db, type: 2}
   block:
   - {fileID: 1626585109949394, guid: 9b13aa08f7cb5d84e9c4e8fea043fff0, type: 2}
   - {fileID: 1078898344108722, guid: 12c36c46a05662441ae6fe48193dece4, type: 2}
+  - {fileID: 1405854851858242, guid: 5ea14db1afe9cae44836472931ee806b, type: 2}
+  - {fileID: 1283418238090484, guid: 2433c044fa28f104a9d69d2dff99c3d9, type: 2}
   monster:
-  - {fileID: 1179996690641022, guid: 7c2c1e6173c94664ca73af899a4414d5, type: 2}
+  - {fileID: 1380904114432070, guid: ac534d8e5f7b33242882b1e4cc9b4ae6, type: 2}
+  - {fileID: 1915294929692830, guid: ac8941def0705eb4ca1ec88f3b85b1d9, type: 2}
+  - {fileID: 1293319284536590, guid: 16feb7846da7e784fb7d28f082630510, type: 2}
   treasure:
-  - {fileID: 1434122248291764, guid: 87dab167947b96c48bc80b9328568922, type: 2}
+  - {fileID: 1867845652553134, guid: 6480f57e78d117d4695fd962741cf95c, type: 2}
   sensor: {fileID: 1769331950004656, guid: 27d857717c30b57478c49e1e82c6a79e, type: 2}
   gate: {fileID: 1196508832846328, guid: 05feb91af1a613f4fb8d03255643805b, type: 2}

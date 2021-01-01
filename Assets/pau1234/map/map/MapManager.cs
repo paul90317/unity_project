@@ -8,6 +8,9 @@ public class MapManager : MonoBehaviour {
     public GameObject[] maps;
     public GameObject[] bossMap;
     public int maxLevel;
+    UnityEngine.UI.Text transitionLabel;
+    MapSound ms;
+    Animator transitionAnimator;
     int cnt;
     int state;
     int id;
@@ -23,9 +26,33 @@ public class MapManager : MonoBehaviour {
             currentMap = Instantiate<GameObject>(maps[id]);
         }
     }
+    private void Start()
+    {
+        GameObject transition = GameObject.FindWithTag("transition");
+        transitionAnimator = transition.GetComponent<Animator>();
+        transitionLabel = transition.transform.GetChild(2).gameObject.GetComponent<UnityEngine.UI.Text>();
+        ms = GetComponent<MapSound>();
+        ms.startSound();
+    }
     public IEnumerator NextScene()
     {
         cnt++;
+        if(cnt < maxLevel)
+        {
+            transitionLabel.text = (state).ToString() + "-" + (cnt).ToString();
+            ms.startSound();
+        }
+        else if(cnt == maxLevel)
+        {
+            transitionLabel.text = (state).ToString() + "-Boss";
+            ms.startSound();
+        }
+        else
+        {
+            transitionLabel.text = (state + 1).ToString() + "-1";
+        }
+        transitionAnimator.SetInteger("next", 1);
+
         if (currentMap)
         {
             Destroy(currentMap);
