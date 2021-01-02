@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerHP : MonoBehaviour {
+    private CameraShake cameraShake;
 
     public int maxHP;
     public int maxShield;
@@ -18,6 +19,8 @@ public class PlayerHP : MonoBehaviour {
     private ShieldBar shieldBar;
     private void Awake()
     {
+        cameraShake = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraShake>();
+
         healthBar = FindObjectOfType<HealthBar>();
         shieldBar = FindObjectOfType<ShieldBar>();
         combatTagTime = 5f;
@@ -85,6 +88,7 @@ public class PlayerHP : MonoBehaviour {
     public void hurt(int damage)
     {
         hp -= damage;
+        StartCoroutine(cameraShake.shakeCamera(.15f, .4f));
     }
     IEnumerator chargeShield()
     {

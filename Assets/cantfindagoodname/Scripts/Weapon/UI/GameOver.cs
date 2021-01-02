@@ -30,12 +30,16 @@ public class GameOver : MonoBehaviour {
     }
     public void EndGame()
     {
+        gameObject.GetComponent<GameOverAudio>().triggerGameOverSFX();
+
         EndGameUI.SetActive(true);
         Time.timeScale = 0f;
         gameOver = true;
     }
     public void backToMainMenu()
     {
+        gameObject.GetComponent<GameOverAudio>().endEvent();
+
         Time.timeScale = 1f;
         SceneManager.LoadScene(1);
     }
