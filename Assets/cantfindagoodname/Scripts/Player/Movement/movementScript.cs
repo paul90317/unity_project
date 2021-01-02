@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class movementScript : MonoBehaviour {
+    [HideInInspector]
+    public float weaponOffset;
 
     private float moveSpeed = 10f;
     private Rigidbody2D rb;
@@ -11,6 +13,7 @@ public class movementScript : MonoBehaviour {
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        weaponOffset = 1f;
     }
 
     private void Update () {
@@ -19,6 +22,6 @@ public class movementScript : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement.normalized * moveSpeed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + movement.normalized * moveSpeed * Time.fixedDeltaTime * weaponOffset);
     }
 }

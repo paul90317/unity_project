@@ -20,13 +20,15 @@ public class BeamWeapon : Weapon {
     {
         if (GameObject.FindGameObjectWithTag("Player").GetComponent<Ammo>().ammo > 0)
         {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<movementScript>().weaponOffset = 0.1f;
+
             railgunLine = GameObject.FindGameObjectWithTag("GameController").transform.GetChild(0).GetComponent<LineRenderer>();
             firePoint = (Vector2)GameObject.FindGameObjectWithTag("Player").transform.position + (Vector2)GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).transform.right * handDistance;
 
             Vector2 dir = (firePoint - (Vector2)GameObject.FindGameObjectWithTag("Player").transform.position).normalized;
             RaycastHit2D hit = Physics2D.Raycast(firePoint, dir, float.PositiveInfinity, raycastLayer);
 
-            if (hit && (hit.collider.CompareTag("monster") || hit.collider.CompareTag("Wall")))
+            if (hit && (hit.collider.CompareTag("monster") || hit.collider.CompareTag("Wall") || hit.collider.CompareTag("box"))) 
             {
                 if (hit.collider.CompareTag("monster"))
                 {
@@ -44,12 +46,14 @@ public class BeamWeapon : Weapon {
             }
             if (Time.time > consumeAmmo)
             {
-                GameObject.FindGameObjectWithTag("Player").GetComponent<Ammo>().ammo -= 1;
-                consumeAmmo = Time.time + ammoConsumptionTick / 40;
+                GameObject.FindGameObjectWithTag("Player").GetComponent<Ammo>().ammo -= 10 / ((GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<DamageAmplify>().level + 1) % 10);
+                consumeAmmo = Time.time + ammoConsumptionTick / 100;
             }
         }
         else
         {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<movementScript>().weaponOffset = 1f;
+
             railgunLine.SetPosition(0, GameObject.FindGameObjectWithTag("Player").transform.position);
             railgunLine.SetPosition(1, GameObject.FindGameObjectWithTag("Player").transform.position);
         }

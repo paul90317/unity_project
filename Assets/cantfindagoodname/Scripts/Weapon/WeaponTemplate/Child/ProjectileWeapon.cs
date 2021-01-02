@@ -14,14 +14,22 @@ public class ProjectileWeapon : Weapon {
 
     public override void Shoot()
     {
-        if (GameObject.FindGameObjectWithTag("Player").transform.GetComponent<Ammo>().ammo > 0 && Time.time > cooldownEnd) 
+        if (GameObject.FindGameObjectWithTag("Player").transform.GetComponent<Ammo>().ammo > 0)
         {
-            firePoint = (Vector2)GameObject.FindGameObjectWithTag("Player").transform.position + (Vector2)GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).transform.right * handDistance;
-            Instantiate(bulletPrefab, firePoint, Quaternion.identity);
+            GameObject.FindGameObjectWithTag("Player").GetComponent<movementScript>().weaponOffset = (0.6f + 0.1f * GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<DamageAmplify>().level) % 1;
+            if (Time.time > cooldownEnd)
+            {
+                firePoint = (Vector2)GameObject.FindGameObjectWithTag("Player").transform.position + (Vector2)GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).transform.right * handDistance;
+                Instantiate(bulletPrefab, firePoint, Quaternion.identity);
 
-            cooldownEnd = Time.time + 1 / fireRate;
+                cooldownEnd = Time.time + 1 / fireRate;
 
-            GameObject.FindGameObjectWithTag("Player").transform.GetComponent<Ammo>().ammo -= ammoConsumption;
+                GameObject.FindGameObjectWithTag("Player").transform.GetComponent<Ammo>().ammo -= ammoConsumption;
+            }
+        }
+        else
+        {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<movementScript>().weaponOffset = 1f;
         }
     }
     private void OnEnable()

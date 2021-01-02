@@ -6,8 +6,8 @@ public class Inventory : MonoBehaviour {
 
     public GameObject Display1, Display2;
     public List<Weapon> inventory;
-    private int maxSize = 2, current = 1, previous = 0;
-    public int c, p;
+    private int maxSize = 2, previous = 0;
+    public int current = 1;
     private void Awake()
     {
         inventory.Add(GetComponent<CurrentWeapon>().currentWeapon);
@@ -17,8 +17,6 @@ public class Inventory : MonoBehaviour {
     }
     private void Update()
     {
-        c = current;
-        p = previous;
         if (Input.GetAxis("Mouse ScrollWheel") != 0f)
         {
             previous = current;
@@ -49,7 +47,10 @@ public class Inventory : MonoBehaviour {
                 current = i;
                 if (previous == current)
                     previous = temp;
-                // add ammo, return insertion
+
+                // level up
+                ++GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<DamageAmplify>().level;
+
                 return insertion;
             }
         }

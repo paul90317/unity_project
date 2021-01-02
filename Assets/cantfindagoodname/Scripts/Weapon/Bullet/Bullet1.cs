@@ -29,9 +29,9 @@ public class Bullet1 : MonoBehaviour {
     {
         if (collision.gameObject.CompareTag("Wall"))
             Destroy(gameObject);
-        else if (collision.gameObject.CompareTag("monster"))
+        else if (collision.gameObject.CompareTag("monster")||collision.gameObject.CompareTag("box"))
         {
-            collision.GetComponent<monsterHealth>().hurt(damage+GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).GetComponent<DamageAmplify>().level);
+            collision.gameObject.SendMessage("hurt",(damage+GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).GetComponent<DamageAmplify>().level));
             Destroy(gameObject);
         }
     }

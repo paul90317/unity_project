@@ -7,6 +7,8 @@ public class DamageAmplify : MonoBehaviour {
     private int _LVL;
     private void Awake()
     {
+        for (int i = 0; i < GameObject.FindGameObjectWithTag("GameController").GetComponentInChildren<WeaponList>().weapons.Count; ++i)
+            GameObject.FindGameObjectWithTag("GameController").GetComponentInChildren<WeaponList>().weapons[i].currentLevel = 0;
         setLevel(0);
     }
     public int level
@@ -20,6 +22,7 @@ public class DamageAmplify : MonoBehaviour {
     }
     private void setLevel(int level)
     {
+        GameObject.FindObjectOfType<Inventory>().inventory[GameObject.FindObjectOfType<Inventory>().current].currentLevel = level;
         switch (level)
         {
             default:
