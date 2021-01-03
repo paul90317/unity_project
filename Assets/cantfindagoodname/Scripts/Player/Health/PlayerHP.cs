@@ -80,6 +80,8 @@ public class PlayerHP : MonoBehaviour {
                 _HP += value - hp;
             else // assign hp
                 _HP = value;
+            if (value - hp < 0)
+                StartCoroutine(cameraShake.shakeCamera(.15f, .4f));
 
             healthBar.setHealth(hp);
             shieldBar.setShield(shield);
@@ -88,7 +90,6 @@ public class PlayerHP : MonoBehaviour {
     public void hurt(int damage)
     {
         hp -= damage;
-        StartCoroutine(cameraShake.shakeCamera(.15f, .4f));
     }
     IEnumerator chargeShield()
     {
