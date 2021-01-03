@@ -20,6 +20,8 @@ public class BeamWeapon : Weapon {
     {
         if (GameObject.FindGameObjectWithTag("Player").GetComponent<Ammo>().ammo > 0)
         {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>().PlayOneShot(GameObject.FindObjectOfType<SFX>().shootBeam, 0.3f);
+
             GameObject.FindGameObjectWithTag("Player").GetComponent<movementScript>().weaponOffset = 0.1f;
 
             railgunLine = GameObject.FindGameObjectWithTag("GameController").transform.GetChild(0).GetComponent<LineRenderer>();

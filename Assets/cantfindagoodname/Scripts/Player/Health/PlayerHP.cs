@@ -72,6 +72,11 @@ public class PlayerHP : MonoBehaviour {
         get { return _HP; }
         set
         {
+            if (value - hp < 0)
+            {
+                hitEffect();
+            }
+
             inCombat = true;
             inCombatTime = Time.time + combatTagTime;
             if ((value - hp) < 0 && shield > 0) // damage shield
@@ -80,8 +85,6 @@ public class PlayerHP : MonoBehaviour {
                 _HP += value - hp;
             else // assign hp
                 _HP = value;
-            if (value - hp < 0)
-                StartCoroutine(cameraShake.shakeCamera(.15f, .4f));
 
             healthBar.setHealth(hp);
             shieldBar.setShield(shield);
@@ -94,11 +97,16 @@ public class PlayerHP : MonoBehaviour {
     IEnumerator chargeShield()
     {
         yield return new WaitForSeconds(1);
-        if (inCombat == false) 
+        if (shield < maxShield && inCombat == false) 
         {
             shield += maxShield / 5;
             shieldBar.setShield(shield);
             StartCoroutine(chargeShield());
         }
+    }
+    private void hitEffect()
+    {
+        GetComponent<AudioSource>().PlayOneShot(GetComponent<SFX>().hit);
+        StartCoroutine(cameraShake.shakeCamera(.15f, .4f));
     }
 }
