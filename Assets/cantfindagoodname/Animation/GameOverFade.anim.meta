@@ -1,15 +1,8 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/player/weapon/ak47/ak47.asset.meta
-guid: 4d0f3dfa63a2502468a794d64b2d27d5
-timeCreated: 1607761185
-=======
-guid: e462afe743dd13d46accc758f39d49b7
-timeCreated: 1609505346
->>>>>>> origin/main:Assets/cantfindagoodname/Animation/GameOverFade.anim.meta
-licenseType: Free
+guid: 07a091f707a97e14c853b8d3ff8a074a
 NativeFormatImporter:
   externalObjects: {}
-  mainObjectFileID: 7400000
+  mainObjectFileID: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

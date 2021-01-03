@@ -1,15 +1,8 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/player/player.prefab.meta
-guid: 757e15f69cd92c14eb40492e96d7e6b8
-timeCreated: 1606544280
-=======
-guid: 486b5704dbc15e144ace6701cfbe0ade
-timeCreated: 1609493781
->>>>>>> origin/main:Assets/cantfindagoodname/Prefab/Objects/Characters/Tank.prefab.meta
-licenseType: Free
+guid: db2cdb1e93c32f64f9cbb7e8c3d2210e
 NativeFormatImporter:
   externalObjects: {}
-  mainObjectFileID: 100100000
+  mainObjectFileID: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

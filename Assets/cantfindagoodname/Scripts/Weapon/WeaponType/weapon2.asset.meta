@@ -1,15 +1,8 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/player/weapon/gun/gun.asset.meta
-guid: 3bd0dd42109260c49a1cabe9427703d0
-timeCreated: 1607763950
-=======
-guid: 6d155c108cfe9dd418e69dcc0237e103
-timeCreated: 1608138167
->>>>>>> origin/main:Assets/cantfindagoodname/Scripts/Weapon/WeaponType/weapon2.asset.meta
-licenseType: Free
+guid: 01f1f5ed30e469d478d7aa5c77797df7
 NativeFormatImporter:
   externalObjects: {}
-  mainObjectFileID: 11400000
+  mainObjectFileID: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

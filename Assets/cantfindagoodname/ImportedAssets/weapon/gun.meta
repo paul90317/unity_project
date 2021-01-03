@@ -1,12 +1,6 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/player/weapon/gun.meta
-guid: 2035b18b13f35614e9cdc192aca7aa60
-=======
-guid: a0d29430eaa743946b47ea63dbadff18
->>>>>>> origin/main:Assets/cantfindagoodname/ImportedAssets/weapon/gun.meta
+guid: 58d26a8f302e10141892972d303bbc97
 folderAsset: yes
-timeCreated: 1608040248
-licenseType: Free
 DefaultImporter:
   externalObjects: {}
   userData: 
