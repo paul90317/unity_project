@@ -27,13 +27,13 @@ public class aimingScript : MonoBehaviour {
     {
         if ((targetPos - (Vector2)GameObject.FindGameObjectWithTag("Player").transform.position).x < 0)
         {
-            GameObject.FindGameObjectWithTag("Player").transform.GetChild(2).GetComponent<SpriteRenderer>().flipX=true;
-            GameObject.FindGameObjectWithTag("Player").transform.GetChild(3).GetComponent<SpriteRenderer>().flipX=true;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>().flipX=true;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>().flipX=true;
         }
         else
         {
-            GameObject.FindGameObjectWithTag("Player").transform.GetChild(2).GetComponent<SpriteRenderer>().flipX=false;
-            GameObject.FindGameObjectWithTag("Player").transform.GetChild(3).GetComponent<SpriteRenderer>().flipX=false;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>().flipX=false;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>().flipX=false;
         }
 
        Vector2 dir = targetPos - (Vector2)transform.position;

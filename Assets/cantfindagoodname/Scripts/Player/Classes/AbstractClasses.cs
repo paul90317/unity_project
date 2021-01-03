@@ -3,6 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class AbstractClasses : MonoBehaviour {
-    public Sprite head, body;
+    public Sprite spr;
     public abstract void skill();
 }

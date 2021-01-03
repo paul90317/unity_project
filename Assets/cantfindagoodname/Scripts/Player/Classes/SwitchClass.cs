@@ -15,8 +15,7 @@ public class SwitchClass : MonoBehaviour {
             classes[current].SetActive(false);
             current = (current + 1) % classes.Count;
             classes[current].SetActive(true);
-            gameObject.GetComponent<Transform>().GetChild(2).GetComponent<SpriteRenderer>().sprite = classes[current].GetComponent<AbstractClasses>().head;
-            gameObject.GetComponent<Transform>().GetChild(3).GetComponent<SpriteRenderer>().sprite = classes[current].GetComponent<AbstractClasses>().body;
+            gameObject.GetComponent<SpriteRenderer>().sprite = classes[current].GetComponent<AbstractClasses>().spr;
         }
 	}
 }
