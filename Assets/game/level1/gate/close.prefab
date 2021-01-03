@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4072925752799086}
   - component: {fileID: 212136494332916590}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: closeUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,9 +38,14 @@ GameObject:
   - component: {fileID: 212006785240260340}
   - component: {fileID: 50577743126294466}
   - component: {fileID: 61828373287150948}
+<<<<<<< HEAD:Assets/game/level1/gate/close.prefab
   m_Layer: 0
+=======
+  - component: {fileID: 95937801604654346}
+  m_Layer: 10
+>>>>>>> origin/main:Assets/pau1234/gate/close.prefab
   m_Name: close
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -149,7 +154,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 285913747
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 66f92cf49c35f164c9deeeacbefc2c6e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -193,7 +198,11 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1360975423
+<<<<<<< HEAD:Assets/game/level1/gate/close.prefab
   m_SortingLayer: 6
+=======
+  m_SortingLayer: 8
+>>>>>>> origin/main:Assets/pau1234/gate/close.prefab
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 146f14f7eb4674b498b3b4fcaead1fb5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
