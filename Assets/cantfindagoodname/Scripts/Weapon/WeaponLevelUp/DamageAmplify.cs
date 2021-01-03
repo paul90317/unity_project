@@ -7,6 +7,11 @@ public class DamageAmplify : MonoBehaviour {
     private int _LVL;
     private void Awake()
     {
+        StartCoroutine(Start());
+    }
+    IEnumerator Start()
+    {
+        yield return new WaitForSeconds(1f);
         for (int i = 0; i < GameObject.FindGameObjectWithTag("GameController").GetComponentInChildren<WeaponList>().weapons.Count; ++i)
             GameObject.FindGameObjectWithTag("GameController").GetComponentInChildren<WeaponList>().weapons[i].currentLevel = 0;
         setLevel(0);
