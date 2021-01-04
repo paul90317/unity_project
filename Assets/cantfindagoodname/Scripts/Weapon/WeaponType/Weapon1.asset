@@ -11,11 +11,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a2a5ba7ba134f845b05b2f71e5ef413, type: 3}
   m_Name: Weapon1
   m_EditorClassIdentifier: 
-  currentWeaponSprite: {fileID: 21300000, guid: c4e9f2b334a0a68429a9ea249700e5d4,
+  currentWeaponSprite: {fileID: 21300000, guid: 6e53cce2de6b9b443bbd608fb7e420d2,
     type: 3}
-  width: 0.9
-  height: 0.5
+  width: 1.5
+  height: 1
   handDistance: 2
+  currentLevel: 0
   damage: 5
   bulletPrefab: {fileID: 1562591258133142, guid: 2e39e5181d0e3ff469d12b62e132a4dc,
     type: 2}

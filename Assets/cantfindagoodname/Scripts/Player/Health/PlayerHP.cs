@@ -9,7 +9,7 @@ public class PlayerHP : MonoBehaviour {
     public int maxShield;
 
     private int shield;
-    private bool selfDamage;
+    // private bool selfDamage;
 
     public bool inCombat;
     private int shieldChargeSpeed;
@@ -33,6 +33,7 @@ public class PlayerHP : MonoBehaviour {
     }
     private void Update() {
         // Debug.Log("HP: "+hp+" Shield: "+shield);
+        /*
         if (!selfDamage && Input.GetKeyDown(KeyCode.M))
         {
             hp -= 1;
@@ -46,6 +47,7 @@ public class PlayerHP : MonoBehaviour {
         {
             hp += 1;
         }
+        */
 
         if (inCombat == true && inCombatTime < Time.time)
         {
