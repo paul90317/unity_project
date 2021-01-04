@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:Assets/player/weapon/ak47/bullet.prefab.meta
+guid: c61a05922ca70fc40a0efc420d1dea8f
+timeCreated: 1607678281
+=======
+guid: cfac302d48e50e64480a6560f3a96624
+timeCreated: 1608118414
+>>>>>>> origin/main:Assets/cantfindagoodname/Prefab/Objects/Entitiy/Enemy.prefab.meta
+licenseType: Free
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
